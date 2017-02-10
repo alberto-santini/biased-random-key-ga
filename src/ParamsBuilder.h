@@ -27,7 +27,7 @@ namespace bga {
         /**
          * Initialises the builder with default values for the parameters.
          */
-        ParamsBuilder() :   population_size{250}, elite_share{0.1}, replace_share{0.1},
+        ParamsBuilder() :   population_size{250}, elite_share{0.2}, replace_share{0.1},
                             crossover_elite_bias{0.7}, max_generations{std::numeric_limits<uint32_t>::max()},
                             max_generations_no_improvement{std::numeric_limits<uint32_t>::max()},
                             timeout_s{std::numeric_limits<uint32_t>::max()}, visitor_freq_iterations{1000} {}
