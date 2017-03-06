@@ -184,7 +184,7 @@ namespace bga {
             std::mt19937::result_type random_data[std::mt19937::state_size];
             std::random_device source;
             std::generate(std::begin(random_data), std::end(random_data), std::ref(source));
-            auto seeds = std::seed_seq(std::begin(random_data), std::end(random_data));
+            std::seed_seq seeds(std::begin(random_data), std::end(random_data));
             auto mt = std::mt19937(seeds);
             auto elite_rnd = std::uniform_int_distribution<uint32_t>(0, elite_size - 1);
             auto non_elite_rnd = std::uniform_int_distribution<uint32_t>(0, non_elite_size - 1);
